@@ -1,0 +1,42 @@
+<div class="container">
+  <div class="image-header-container container">
+    <h1 class="titleHeader">SAMPLE </h1>
+    <p class="subtitleHeader">----- Lorem ipsum dolor sit amet -----</p>
+  </div>
+  <div class="container">
+    <nav class="navbar navbar-inverse">
+      <div class="container-fluid">
+        <!-- Brand and toggle get grouped for better mobile display -->
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse"
+                  data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+        </div>
+
+        <!-- Collect the nav links, forms, and other content for toggling -->
+        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+          <ul class="nav navbar-nav">
+            <!--El uso de href es una manera incorrecta de hacer redireccion, ya que es una forma primitiva de hacerlo,
+            es como si se hiciera en html plano, en angular debe usarse routerlink,
+            el href carga el html otravez, hace una redirecccion en cambio el routerlink carga solo el componente y
+            actualiza esa parte del DOM-->
+            <li routerLinkActive="Item 1"><a routerLink="/personas">Item 1 <span class="sr-only">(current)</span></a>
+            </li>
+            <li routerLinkActive="Item 1"><a routerLink="/otro">Item 1</a></li>
+            <li routerLinkActive="Item 1"><a routerLink="/otro">Item 1</a></li>
+            <li routerLinkActive="Item 1"><a routerLink="/otro">Item 1</a></li>
+          </ul>
+        </div><!-- /.navbar-collapse -->
+      </div><!-- /.container-fluid -->
+    </nav>
+  </div>
+</div>
+
+
+<!--Para hacer el ruteo en la aplicacion deacuerdo al map definido en app.component.ts-->
+<router-outlet></router-outlet>
+

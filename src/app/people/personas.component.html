@@ -1,0 +1,44 @@
+<!--Seccion de graficos-->
+<graphics></graphics>
+<div class="alert alert-warning" *ngIf="status == '404'" role="alert">Estamos teniendo problemas al tratar de obtener la
+  información :( {{statusText}}
+</div>
+<div class="container">
+  <p class="bg-success sectionText">Duis mollis, est non commodo luctus, nisi erat porttitor ligula.</p>
+  <!--12 columnas-->
+
+    <div class="panel panel-default">
+
+      <form>
+        <div class="form-group">
+          <div class="input-group">
+            <div class="input-group-addon">
+              <i class="glyphicon glyphicon-search"></i>
+            </div>
+            <input type="text" class="form-control" name="searchString" placeholder="Type to search by name..." [(ngModel)]="searchString">
+          </div>
+        </div>
+      </form>
+
+      <!-- Table -->
+      <table class="table">
+        <thead>
+        <tr>
+          <th>Gender</th>
+          <th>Name</th>
+          <th>Height</th>
+          <th>Mass</th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr *ngFor="let person of personas | filterPeople : searchString; let i = index">
+          <td>{{ person.gender }}</td>
+          <td>{{ person.name }}</td>
+          <td>{{ person.height }}</td>
+          <td>{{ person.mass }}</td>
+        </tr>
+        </tbody>
+      </table>
+    </div>
+</div>
+
